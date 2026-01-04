@@ -59,7 +59,15 @@ export default function Hero() {
             className={styles.imageWrapper}
           >
              <div className={styles.blob}></div>
-SAME          </motion.div>
+             <Image
+                src={medicalHero}
+                alt="Regulatory experts collaborating"
+                width={800}
+                height={600}
+                priority
+                className={styles.heroImage}
+             />
+          </motion.div>
         </div>
       </div>
     </section>
