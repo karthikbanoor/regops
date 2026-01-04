@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import teamImage from "@/assets/team-working.png";
 import Button from "@/components/ui/Button";
 import styles from "./WhyUs.module.css";
 import { CheckCircle2 } from "lucide-react";
@@ -38,7 +39,7 @@ export default function WhyUs() {
           {/* Right Content - Clean Medical Look */}
           <div className={styles.imageWrapper}>
             <Image
-                src="/images/team-working.png"
+                src={teamImage}
                 alt="RegOps strategic partnership"
                 width={800}
                 height={700}

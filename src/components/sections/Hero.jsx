@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import medicalHero from "@/assets/medical-hero.png";
 import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
 import styles from "./Hero.module.css";
@@ -58,15 +59,7 @@ export default function Hero() {
             className={styles.imageWrapper}
           >
              <div className={styles.blob}></div>
-             <Image
-                src="/images/medical-hero.png"
-                alt="Regulatory experts collaborating"
-                width={800}
-                height={600}
-                priority
-                className={styles.heroImage}
-             />
-          </motion.div>
+SAME          </motion.div>
         </div>
       </div>
     </section>
