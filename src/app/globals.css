@@ -1,33 +1,89 @@
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
+
+  --primary: #0f5132;
+  /* Deep RegOps Green/Teal approximation */
+  --primary-foreground: #ffffff;
+
+  --secondary: #e2e8f0;
+  --secondary-foreground: #0f172a;
+
+  /* Medical Prime Palette (Pfizer-like) */
+  --primary: #0066CC;
+  /* Royal Blue */
+  --primary-dark: #004C99;
+  --accent: #00CCFF;
+  /* Bright Cyan Accent */
+  --accent-light: #E0F7FA;
+
+  --background: #FFFFFF;
+  --surface: #F3F6F8;
+  /* Light blue-grey for sections */
+  --foreground: #1A202C;
+  /* Softer black */
+
+  --muted: #E2E8F0;
+  --muted-foreground: #64748B;
+
+  --border: #DAE1E7;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+
+  /* Typography */
+  --font-sans: 'Public Sans', system-ui, sans-serif;
+  --font-serif: 'Public Sans', system-ui, sans-serif;
+  /* Single font family for clean look */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #020617;
+    --foreground: #f8fafc;
+
+    --primary: #22c55e;
+    --primary-foreground: #020617;
+
+    --secondary: #1e293b;
+    --secondary-foreground: #f8fafc;
+
+    --muted: #0f172a;
+    --muted-foreground: #94a3b8;
   }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  color: var(--foreground);
+  background: var(--background);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans);
+  /* Headings use Sans too for modern look */
+  font-weight: 700;
+  color: var(--foreground);
+  letter-spacing: -0.02em;
 }
 
 a {

@@ -1,0 +1,135 @@
+.section {
+    padding: 8rem 0;
+    background: #ffffff;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.tag {
+    color: #4A5568;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    color: #1A202C;
+    line-height: 1.15;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    color: #0066CC;
+}
+
+.description {
+    font-size: 1.125rem;
+    color: #4A5568;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+}
+
+.statsRow {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.statValue {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0066CC;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.statLabel {
+    font-size: 0.9rem;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.cta {
+    background: #0066CC;
+    color: #ffffff;
+}
+
+.cta:hover {
+    background: #0052A3;
+}
+
+/* Image Side */
+.imageWrapper {
+    position: relative;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.floatingBadge {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    background: #ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.badgeIcon {
+    color: #00D26A;
+    /* Success Green */
+}
+
+.badgeTitle {
+    display: block;
+    font-weight: 700;
+    color: #1A202C;
+    font-size: 0.95rem;
+}
+
+.badgeText {
+    display: block;
+    font-size: 0.85rem;
+    color: #718096;
+}

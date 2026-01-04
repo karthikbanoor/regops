@@ -1,0 +1,123 @@
+.section {
+    padding: 6rem 0;
+    background: #F8FAFC;
+    /* Soft surface */
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.sectionTag {
+    color: #4A5568;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 2.75rem;
+    color: #1A202C;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.subtitle {
+    color: #4A5568;
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    /* Distinct soft rounding */
+    padding: 2.5rem;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    border-color: #BEE3F8;
+    /* Light blue border on hover */
+}
+
+.iconWrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    /* Squircle */
+    background: #EBF8FF;
+    /* Light blue background */
+    color: #0066CC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.cardTitle {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1A202C;
+    margin-bottom: 1rem;
+}
+
+.cardDesc {
+    color: #4A5568;
+    line-height: 1.65;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.cardLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #0066CC;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: gap 0.2s;
+}
+
+.cardLink:hover {
+    gap: 0.75rem;
+    text-decoration: underline;
+}

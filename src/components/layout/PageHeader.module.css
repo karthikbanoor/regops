@@ -1,0 +1,25 @@
+.header {
+    padding: 10rem 0 4rem;
+    background: var(--muted);
+    border-bottom: 1px solid var(--secondary);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--foreground);
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: var(--muted-foreground);
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+}

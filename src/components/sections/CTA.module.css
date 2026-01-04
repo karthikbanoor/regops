@@ -1,0 +1,50 @@
+.section {
+    padding: 8rem 0;
+    background: #0066CC;
+    /* Pfizer Blue */
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: var(--font-sans);
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #E0F7FA;
+    /* Slate 500 */
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.primaryBtn {
+    background: #ffffff;
+    color: #0066CC;
+    border: none;
+    font-weight: 700;
+    border-radius: 9999px;
+    /* Pill */
+    padding: 1rem 3rem;
+    text-transform: none;
+    /* Modern */
+}
+
+.primaryBtn:hover {
+    background: #EBF8FF;
+}
