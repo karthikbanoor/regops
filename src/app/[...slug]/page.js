@@ -24,7 +24,7 @@ export async function generateStaticParams() {
         const params = pages.data.map((page) => ({
             // Split the slug into an array for catch-all route
             slug: page.slug.split("/").filter(Boolean),
-        })).filter(p => p.slug.length > 0 && p.slug[0] !== 'home' && p.slug[0] !== 'about');
+        })).filter(p => p.slug.length > 0 && p.slug[0] !== 'about');
 
         console.log("Generated params:", JSON.stringify(params));
         return params;
