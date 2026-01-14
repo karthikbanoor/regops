@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_sections_rich_texts",
+    "info": {
+        "displayName": "RichText",
+        "icon": "file-alt",
+        "description": "Rich text content"
+    },
+    "options": {},
+    "attributes": {
+        "content": {
+            "type": "richtext",
+            "required": true
+        }
+    }
+}

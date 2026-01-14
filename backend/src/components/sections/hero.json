@@ -1,0 +1,26 @@
+{
+    "collectionName": "components_sections_heroes",
+    "info": {
+        "displayName": "Hero",
+        "icon": "landscape",
+        "description": "Hero section"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "description": {
+            "type": "text"
+        },
+        "image": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images"
+            ],
+            "required": false
+        }
+    }
+}

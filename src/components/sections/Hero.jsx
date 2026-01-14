@@ -7,7 +7,65 @@ import Button from "@/components/ui/Button";
 import styles from "./Hero.module.css";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
-export default function Hero() {
+import { getStrapiMedia } from "@/lib/strapi";
+
+export default function Hero({ data }) {
+  // If data is passed (from Strapi), use it. Otherwise fall back to defaults (for Home page static usage)
+  const title = data?.title;
+  const description = data?.description;
+  const imageUrl = data?.image?.url ? getStrapiMedia(data.image.url) : null;
+
+  if (data) {
+    // Dynamic Hero Rendering
+    return (
+        <section className={styles.hero}>
+        <div className={styles.container}>
+          <div className={styles.grid}>
+            {/* Left Content */}
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className={styles.content}
+            >
+              
+              <h1 className={styles.headline}>
+                {title}
+              </h1>
+              
+              <p className={styles.subheadline}>
+                {description}
+              </p>
+              
+              {/* Optional: Add buttons if we add them to schema later */}
+            </motion.div>
+  
+            {/* Right Image */}
+            {imageUrl && (
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              className={styles.imageWrapper}
+            >
+               <div className={styles.blob}></div>
+               <Image
+                  src={imageUrl}
+                  alt={title}
+                  width={800}
+                  height={600}
+                  priority
+                  className={styles.heroImage}
+               />
+            </motion.div>
+            )}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  // Static Fallback (Original Code) for specific hardcoded pages
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
