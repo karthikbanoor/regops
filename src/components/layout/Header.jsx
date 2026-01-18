@@ -28,12 +28,12 @@ export default function Header() {
       dropdown: [
         { name: "Gap Analysis & Transition Planning", href: "/medical-devices/gap-analysis-transition-planning" },
         { name: "510(k) Premarket Notifications", href: "/medical-devices/510(k)-premarket-notifications" },
-        "Device Description & Specification",
-        "Pre-Submission Meeting Support",
-        "PMCF Plan Development",
-        "Change Impact Assessment",
-        "PMS System Design",
-        "Market Assessment & Prioritization"
+        { name: "Device Description & Specification", href: "/medical-devices/device-description-specification" },
+        { name: "Pre-Submission Meeting Support", href: "/medical-devices/pre-submission-meeting-support" },
+        { name: "PMCF Plan Development", href: "/medical-devices/pmcf-plan-development" },
+        { name: "Change Impact Assessment", href: "/medical-devices/change-impact-assessment" },
+        { name: "PMS System Design", href: "/medical-devices/pms-system-design" },
+        { name: "Market Assessment & Prioritization", href: "/medical-devices/market-assessment-prioritization" }
       ]
     },
     {
