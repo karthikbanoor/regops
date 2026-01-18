@@ -1,25 +1,83 @@
 .header {
-    padding: 10rem 0 4rem;
-    background: var(--muted);
-    border-bottom: 1px solid var(--secondary);
+    padding: 12rem 0 6rem;
+    background: radial-gradient(circle at 50% 0%, #F0F9FF 0%, #FFFFFF 100%);
+    border-bottom: 1px solid #E2E8F0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle Grid Pattern Overlay */
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(#E2E8F0 1px, transparent 1px),
+        linear-gradient(90deg, #E2E8F0 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.3;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .title {
-    font-size: 3rem;
-    color: var(--foreground);
-    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #1A202C;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #1A202C 0%, #2D3748 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-    color: var(--muted-foreground);
-    font-size: 1.25rem;
-    max-width: 800px;
+    color: #4A5568;
+    font-size: 1.35rem;
+    max-width: 700px;
     margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Badge for "Consulting" or similar tag if added later */
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #EBF8FF;
+    color: #0066CC;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 8rem 0 4rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.125rem;
+    }
 }

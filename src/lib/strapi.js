@@ -32,16 +32,22 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
             `/api${path}${queryString ? `?${queryString}` : ""}`
         )}`;
 
-        const response = await fetch(requestUrl, mergedOptions);
+        // Trigger expected error if fetch fails (e.g., connection refused)
+        try {
+            const response = await fetch(requestUrl, mergedOptions);
 
-        if (!response.ok) {
-            // Log error but don't crash
-            console.error(`Error fetching from Strapi: ${response.statusText}`);
+            if (!response.ok) {
+                console.error(`Error fetching from Strapi: ${response.statusText}`);
+                return null;
+            }
+
+            const data = await response.json();
+            return data;
+        } catch (fetchError) {
+            console.warn(`Strapi not reachable at ${requestUrl}. Using fallback content.`);
             return null;
         }
 
-        const data = await response.json();
-        return data;
     } catch (error) {
         console.error("Fetch API Error:", error);
         return null;

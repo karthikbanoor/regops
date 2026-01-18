@@ -24,8 +24,17 @@ export default function Header() {
     { name: "About", href: "/about" },
     {
       name: "Medical Devices",
-      href: "/medical-devices",
-      dropdown: ["Strategy", "Submissions", "Quality", "Clinical"]
+      href: "#",
+      dropdown: [
+        { name: "Gap Analysis & Transition Planning", href: "/medical-devices/gap-analysis-transition-planning" },
+        { name: "510(k) Premarket Notifications", href: "/medical-devices/510(k)-premarket-notifications" },
+        "Device Description & Specification",
+        "Pre-Submission Meeting Support",
+        "PMCF Plan Development",
+        "Change Impact Assessment",
+        "PMS System Design",
+        "Market Assessment & Prioritization"
+      ]
     },
     {
       name: "Pharmaceuticals",
@@ -52,12 +61,16 @@ export default function Header() {
               </Link>
               
               {item.dropdown && (
-                <div className={styles.dropdown}>
-                  {item.dropdown.map((subItem) => (
-                    <Link key={subItem} href="#" className={styles.dropdownItem}>
-                      {subItem}
-                    </Link>
-                  ))}
+                <div className={cn(styles.dropdown, item.dropdown.length > 6 && styles.dropdownWide)}>
+                  {item.dropdown.map((subItem) => {
+                    const label = typeof subItem === 'string' ? subItem : subItem.name;
+                    const href = typeof subItem === 'string' ? '#' : subItem.href;
+                    return (
+                      <Link key={label} href={href} className={styles.dropdownItem}>
+                         {label}
+                      </Link>
+                    );
+                  })}
                 </div>
               )}
             </div>
@@ -98,16 +111,20 @@ export default function Header() {
                   </Link>
                   {item.dropdown && (
                     <div className={styles.mobileDropdown}>
-                      {item.dropdown.map((subItem) => (
-                        <Link 
-                            key={subItem} 
-                            href="#" 
-                            className={styles.mobileDropdownItem}
-                            onClick={() => setIsOpen(false)}
-                        >
-                          {subItem}
-                        </Link>
-                      ))}
+                      {item.dropdown.map((subItem) => {
+                        const label = typeof subItem === 'string' ? subItem : subItem.name;
+                         const href = typeof subItem === 'string' ? '#' : subItem.href;
+                         return (
+                          <Link 
+                              key={label} 
+                              href={href} 
+                              className={styles.mobileDropdownItem}
+                              onClick={() => setIsOpen(false)}
+                          >
+                            {label}
+                          </Link>
+                        );
+                      })}
                     </div>
                   )}
                 </div>
