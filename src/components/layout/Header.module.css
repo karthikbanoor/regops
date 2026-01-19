@@ -100,7 +100,7 @@
     padding: 0.5rem;
     min-width: 260px;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-    
+
     /* Animation state: Hidden */
     opacity: 0;
     visibility: hidden;
@@ -111,7 +111,7 @@
 
 /* Specific modifier for wide dropdowns (like Medical Devices) */
 .dropdownWide {
-    min-width: 500px;
+    min-width: 600px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;

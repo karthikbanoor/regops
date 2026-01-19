@@ -21,6 +21,7 @@ export default function Header() {
   }, []);
 
   const navItems = [
+    { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     {
       name: "Medical Devices",
@@ -54,7 +55,7 @@ export default function Header() {
         { name: "Regulatory Intelligence Services", href: "/pharmaceuticals/regulatory-intelligence-services" }
       ]
     },
-    { name: "Insights", href: "/insights" },
+    { name: "Consumer", href: "/consumer" },
   ];
 
   return (
