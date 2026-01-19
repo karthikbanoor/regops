@@ -2,7 +2,7 @@
 
 import PageHeader from "@/components/layout/PageHeader";
 import styles from "../../service-page.module.css";
-import { CheckCircle, Map, Route, FileCheck, Users, Replace, CalendarCheck } from "lucide-react";
+import { CheckCircle, MapPin, Flag, FileInput, Handshake, Globe2, AlertOctagon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function MarketAccessPage() {
@@ -10,21 +10,21 @@ export default function MarketAccessPage() {
     <main className={styles.main}>
       <PageHeader 
         title="Market Access & Expansion" 
-        subtitle="Strategic regulatory route planning and submission support for global markets."
+        subtitle="Strategic expansion into new global markets with optimized regulatory pathways."
       />
       
       {/* Overview Section */}
       <section className={cn(styles.section, styles.sectionWhite)}>
         <div className={styles.narrowContainer}>
           <h2 className={styles.sectionTitle}>
-            Global Expansion Strategy
+            Global Reach, Local Expertise
           </h2>
           <p className={styles.textLarge}>
-            Global medical device market access requires navigating regulatory systems that vary significantly in structure, requirements, and timelines. Expansion strategies must balance market potential against regulatory investment.
+            Global market access requires navigating diverse regulatory frameworks, each with unique requirements, timelines, and expectations. Expanding into new markets involves complex decisions: which markets to prioritize, how to sequence filings, and how to adapt dossiers.
           </p>
           <div style={{ height: '3px', width: '80px', background: '#0066CC', margin: '2rem 0', borderRadius: '2px' }}></div>
           <p className={styles.text}>
-            RegOps provides market access expertise across established and emerging device markets worldwide. We help you prioritize expansion targets, develop efficient registration strategies, and execute submissions through local regulatory pathways. Our approach minimizes redundant effort by leveraging existing regulatory documentation and approval references where permitted, while ensuring market-specific requirements are fully addressed.
+            RegOps provides market access expertise that helps you expand strategically. We understand regulatory pathways across established and emerging markets, and we help you develop filing strategies that balance speed, cost, and risk. Our approach ensures your products reach patients in new markets efficiently while maintaining regulatory compliance throughout your global footprint.
           </p>
         </div>
       </section>
@@ -35,68 +35,68 @@ export default function MarketAccessPage() {
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
              <h2 className={styles.sectionTitle}>Our Capabilities</h2>
              <p className={styles.text} style={{ maxWidth: '600px', margin: '0 auto' }}>
-               Comprehensive support for entering new global markets.
+               From market selection to post-registration compliance.
              </p>
           </div>
           
           <div className={styles.grid}>
             <div className={styles.card}>
               <div className={styles.cardTitle}>
-                  <div className={styles.iconWrapper}><Map size={20} /></div>
-                  Market Assessment
+                  <div className={styles.iconWrapper}><MapPin size={20} /></div>
+                  Market Prioritization
               </div>
               <p className={styles.cardText}>
-                Strategic analysis of potential markets considering regulatory complexity, timelines, market size, and local requirements. We help you focus resources where they generate greatest return.
+                 Strategic analysis of potential markets considering regulatory complexity, timelines, and potential. We help you focus expansion efforts where they generate value.
               </p>
             </div>
 
             <div className={styles.card}>
               <div className={styles.cardTitle}>
-                  <div className={styles.iconWrapper}><Route size={20} /></div>
-                  Pathway Analysis
+                  <div className={styles.iconWrapper}><Flag size={20} /></div>
+                  Registration Strategy
               </div>
               <p className={styles.cardText}>
-                Detailed evaluation of registration requirements for target markets including submission formats, testing, and local representation. We map pathways and identify documentation needs.
+                Development of market-specific registration strategies including pathway selection and work-sharing opportunities. We optimize filing approaches for each target.
               </p>
             </div>
 
             <div className={styles.card}>
               <div className={styles.cardTitle}>
-                  <div className={styles.iconWrapper}><FileCheck size={20} /></div>
-                  Dossier Development
+                  <div className={styles.iconWrapper}><FileInput size={20} /></div>
+                  Dossier Adaptation
               </div>
               <p className={styles.cardText}>
-                Adaptation of existing regulatory documentation for international submissions, including Technical File conversions, form completion, and local language documentation.
+                 Modification of dossiers to meet regional requirements including Module 1 adaptations and translations. We ensure submissions meet local expectations.
               </p>
             </div>
 
             <div className={styles.card}>
               <div className={styles.cardTitle}>
-                  <div className={styles.iconWrapper}><Users size={20} /></div>
-                  Partner Coordination
+                  <div className={styles.iconWrapper}><Handshake size={20} /></div>
+                  Local Coordination
               </div>
               <p className={styles.cardText}>
-                Management of relationships with local regulatory agents, Authorized Representatives, and in-market partners. We coordinate activities and ensure regulatory alignment.
+                Coordination with local regulatory partners, agents, and health authorities. We bridge communication gaps and ensure smooth interaction with stakeholders.
               </p>
             </div>
 
             <div className={styles.card}>
               <div className={styles.cardTitle}>
-                  <div className={styles.iconWrapper}><Replace size={20} /></div>
-                  Reference Strategy
+                  <div className={styles.iconWrapper}><Globe2 size={20} /></div>
+                  Recognition Pathways
               </div>
               <p className={styles.cardText}>
-                Leveraging of FDA clearance, CE marking, and other reference approvals in markets with reliance pathways. We identify opportunities to accelerate registration.
+                 Leveraging of reference decisions (FDA, EMA) to accelerate registration in markets with reliance frameworks, speeding up your global rollout.
               </p>
             </div>
 
              <div className={styles.card}>
               <div className={styles.cardTitle}>
-                  <div className={styles.iconWrapper}><CalendarCheck size={20} /></div>
-                  Post-Registration
+                  <div className={styles.iconWrapper}><AlertOctagon size={20} /></div>
+                  Local Compliance
               </div>
               <p className={styles.cardText}>
-                Ongoing support for maintaining registrations including renewals, annual filings, variation submissions, and vigilance. We ensure continued market access.
+                Ongoing regulatory maintenance in registered markets including renewals and variations. We ensure continued market access after initial approval.
               </p>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function MarketAccessPage() {
             The RegOps Advantage
           </h2>
           <p className={styles.textLarge} style={{ marginBottom: '3rem' }}>
-            We design registration approaches that leverage existing documentation, minimizing new work for each market entry.
+            We help you plan expansion with accurate expectations and strategic efficiency.
           </p>
 
           <div className={styles.advantageGrid}>
@@ -119,16 +119,25 @@ export default function MarketAccessPage() {
                  <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Global Network
                </h3>
                <p className={styles.text}>
-                 We maintain relationships with consultants and local representatives across target markets, enabling effective execution.
+                 We maintain relationships with experts across target markets, enabling effective execution wherever you need to file.
                </p>
              </div>
              
              <div className={styles.advantageItem}>
                <h3 className={styles.advantageTitle}>
-                 <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Efficient Strategies
+                 <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Strategic Efficiency
                </h3>
                <p className={styles.text}>
-                 We leverage existing documentation and approval references to minimize new work required for each market entry.
+                 We design filing strategies that minimize redundant effort, leveraging reference approvals to speed up global access.
+               </p>
+             </div>
+
+             <div className={styles.advantageItem}>
+               <h3 className={styles.advantageTitle}>
+                 <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Market Knowledge
+               </h3>
+               <p className={styles.text}>
+                 Our experience spans established markets (US, EU, JP) and emerging markets, allowing us to navigate diverse regulatory environments.
                </p>
              </div>
 
@@ -137,16 +146,7 @@ export default function MarketAccessPage() {
                  <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Realistic Planning
                </h3>
                <p className={styles.text}>
-                 We provide accurate timeline and cost estimates, enabling informed business decisions about expansion priorities.
-               </p>
-             </div>
-
-             <div className={styles.advantageItem}>
-               <h3 className={styles.advantageTitle}>
-                 <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Ongoing Partnership
-               </h3>
-               <p className={styles.text}>
-                 We support ongoing compliance, renewals, and expansion into additional markets as your business grows.
+                 We set accurate timeline and resource expectations, helping you plan budgets and product launches with confidence.
                </p>
              </div>
           </div>

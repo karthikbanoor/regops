@@ -39,7 +39,20 @@ export default function Header() {
     {
       name: "Pharmaceuticals",
       href: "/pharma",
-      dropdown: ["Regulatory Affairs", "Pharmacovigilance", "CMC", "Market Access"]
+      dropdown: [
+        { name: "CMC Technical Writing", href: "/pharmaceuticals/cmc-technical-writing" },
+        { name: "Dossier Authoring Services", href: "/pharmaceuticals/dossier-authoring-services" },
+        { name: "eCTD Submission Services", href: "/pharmaceuticals/ectd-submission-services" },
+        { name: "Gap Analysis & Compliance", href: "/pharmaceuticals/gap-analysis-compliance" },
+        { name: "GxP Audit Services", href: "/pharmaceuticals/gxp-audit-services" },
+        { name: "Labeling & Artwork Services", href: "/pharmaceuticals/labeling-artwork-services" },
+        { name: "Lifecycle Management Services", href: "/pharmaceuticals/lifecycle-management-services" },
+        { name: "Market Access & Expansion", href: "/pharmaceuticals/market-access-expansion" },
+        { name: "Medical Writing Services", href: "/pharmaceuticals/medical-writing-services" },
+        { name: "Pharmacovigilance Services", href: "/pharmaceuticals/pharmacovigilance-services" },
+        { name: "RA Consulting & Strategy", href: "/pharmaceuticals/ra-consulting-strategy" },
+        { name: "Regulatory Intelligence Services", href: "/pharmaceuticals/regulatory-intelligence-services" }
+      ]
     },
     { name: "Insights", href: "/insights" },
   ];

@@ -1,7 +1,7 @@
 "use client";
 
 import PageHeader from "@/components/layout/PageHeader";
-import styles from "../service-page.module.css";
+import styles from "../../service-page.module.css";
 import { CheckCircle, FileText, Search, BookOpen, Database, BarChart, GitMerge } from "lucide-react";
 import { cn } from "@/lib/utils";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import PageHeader from "@/components/layout/PageHeader";
-import styles from "../service-page.module.css";
+import styles from "../../service-page.module.css";
 import { CheckCircle, FileText, ListChecks, FileCog, ShieldAlert, Microscope, FileSearch, Layers, Scale, Repeat } from "lucide-react";
 import { cn } from "@/lib/utils";
 

@@ -2,29 +2,29 @@
 
 import PageHeader from "@/components/layout/PageHeader";
 import styles from "../../service-page.module.css";
-import { CheckCircle, Sliders, FileText, ClipboardCheck, BarChart2, Globe, Scale, Activity, ShieldCheck } from "lucide-react";
+import { CheckCircle, Route, Users, Search, FastForward, Globe, ClipboardCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export default function GapAnalysisPage() {
+export default function RAStrategyPage() {
   return (
     <main className={styles.main}>
       <PageHeader 
-        title="MDR/IVDR Consulting" 
-        subtitle="Strategic guidance for EU regulatory transformation."
+        title="RA Consulting & Strategy" 
+        subtitle="Expert guidance to navigate complex global regulatory pathways."
       />
       
       {/* Overview Section */}
       <section className={cn(styles.section, styles.sectionWhite)}>
         <div className={styles.narrowContainer}>
           <h2 className={styles.sectionTitle}>
-            Navigating the Regulatory Shift
+            Strategic Regulatory Partnerships
           </h2>
           <p className={styles.textLarge}>
-            The transition from the Medical Device Directives (MDD/AIMDD/IVDD) to the Medical Device Regulation (EU 2017/745) and In Vitro Diagnostic Regulation (EU 2017/746) represents the most significant regulatory change in decades.
+            Successful drug development requires more than just following rules—it demands strategic foresight. Choosing the optimal regulatory pathway can shave months off development timelines and save millions in costs. Conversely, a misstep in early strategy can result in costly delays or clinical hold.
           </p>
           <div style={{ height: '3px', width: '80px', background: '#0066CC', margin: '2rem 0', borderRadius: '2px' }}></div>
           <p className={styles.text}>
-            RegOps provides strategic MDR/IVDR consulting to help you navigate this complex landscape. We assess your compliance status, develop practical transition roadmaps, and support implementation. Our consultants prioritize efforts to help you allocate resources effectively and maintain market access throughout the transition.
+            RegOps provides senior-level regulatory consulting that helps you navigate complexity. We partner with you to define regulatory strategy, prepare for health authority interactions, and assess program risks. Our consultants bring decades of experience across diverse therapeutic areas and regions, offering the insight you need to make confident development decisions.
           </p>
         </div>
       </section>
@@ -35,68 +35,68 @@ export default function GapAnalysisPage() {
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
              <h2 className={styles.sectionTitle}>Our Capabilities</h2>
              <p className={styles.text} style={{ maxWidth: '600px', margin: '0 auto' }}>
-               Comprehensive support across the entire regulatory lifecycle.
+               Strategic support from early development to marketing authorization.
              </p>
           </div>
           
           <div className={styles.grid}>
             <div className={styles.card}>
               <div className={styles.cardTitle}>
-                  <div className={styles.iconWrapper}><Sliders size={20} /></div>
-                  Gap Analysis
+                  <div className={styles.iconWrapper}><Route size={20} /></div>
+                  Strategy Development
               </div>
               <p className={styles.cardText}>
-                Comprehensive assessment of technical documentation and quality systems against MDR/IVDR. We identify gaps, quantify remediation effort, and develop prioritized transition plans.
+                 Definition of regulatory pathways, target product profiles, and submission plans. We help you align regulatory milestones with business objectives.
               </p>
             </div>
 
             <div className={styles.card}>
               <div className={styles.cardTitle}>
-                  <div className={styles.iconWrapper}><Scale size={20} /></div>
-                  Regulatory Pathway
+                  <div className={styles.iconWrapper}><Users size={20} /></div>
+                  HA Meetings
               </div>
               <p className={styles.cardText}>
-                Determination of device classification under MDR/IVDR key rules. We advise on conformity assessment routes, combination products, and Notified Body involvement.
+                Preparation for and support during meetings with FDA, EMA, and other agencies. We help you craft briefing books and rehearse for successful interactions.
               </p>
             </div>
 
             <div className={styles.card}>
               <div className={styles.cardTitle}>
-                  <div className={styles.iconWrapper}><Activity size={20} /></div>
-                  Clinical Strategy
+                  <div className={styles.iconWrapper}><Search size={20} /></div>
+                  Due Diligence
               </div>
               <p className={styles.cardText}>
-                Development of clinical evaluation strategies to satisfy enhanced requirements. We help establish clinical plans, equivalence justifications, and PMS/PMCF strategies.
+                 Independent regulatory assessment of in-licensing or acquisition targets. We identify regulatory risks and value drivers in potential assets.
               </p>
             </div>
 
             <div className={styles.card}>
               <div className={styles.cardTitle}>
-                  <div className={styles.iconWrapper}><BarChart2 size={20} /></div>
-                  UDI & EUDAMED
+                  <div className={styles.iconWrapper}><FastForward size={20} /></div>
+                  Expedited Pathways
               </div>
               <p className={styles.cardText}>
-                Implementation support for Unique Device Identification and EUDAMED registration. We guide UDI assignment, labeling updates, and database submissions.
+                Assessment of eligibility for Breakthrough Therapy, Fast Track, RMAT, PRIME, and other accelerated programs. We support designation requests.
               </p>
             </div>
 
             <div className={styles.card}>
               <div className={styles.cardTitle}>
                   <div className={styles.iconWrapper}><Globe size={20} /></div>
-                  Economic Operators
+                  Global Planning
               </div>
               <p className={styles.cardText}>
-                Advisory on responsibilities for manufacturers, importers, and distributors. We help establish compliant supply chain arrangements and ensure regulatory understanding.
+                Integrated global regulatory plans that coordinate development activities across US, EU, and other regions to optimize global approval timing.
               </p>
             </div>
 
              <div className={styles.card}>
               <div className={styles.cardTitle}>
                   <div className={styles.iconWrapper}><ClipboardCheck size={20} /></div>
-                  Notified Body Liason
+                  Program Reviews
               </div>
               <p className={styles.cardText}>
-                Support for interactions including application preparation, submission, and audit prep. We help present your regulatory case effectively for efficient certification.
+                Strategic review of ongoing development programs. We identify potential regulatory hurdles and recommend course corrections to ensure compliance.
               </p>
             </div>
           </div>
@@ -110,43 +110,43 @@ export default function GapAnalysisPage() {
             The RegOps Advantage
           </h2>
           <p className={styles.textLarge} style={{ marginBottom: '3rem' }}>
-            Our consultants have supported manufacturers across the device spectrum—from Class I accessories to Class III implantables. We understand both the requirements and the practical challenges.
+            We bring agency insight and practical experience to your development team.
           </p>
 
           <div className={styles.advantageGrid}>
              <div className={styles.advantageItem}>
                <h3 className={styles.advantageTitle}>
-                 <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Regulatory Depth
+                 <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Strategic Depth
                </h3>
                <p className={styles.text}>
-                 We maintain current knowledge of MDR/IVDR requirements, MDCG guidance, and Notified Body practices.
+                 We don&apos;t just quote regulations; we interpret them. We help you find creative, compliant solutions to complex challenges.
                </p>
              </div>
              
              <div className={styles.advantageItem}>
                <h3 className={styles.advantageTitle}>
+                 <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Agency Insight
+               </h3>
+               <p className={styles.text}>
+                 Our team includes former reviewers and industry veterans who understand how regulators think and what they need to approve a product.
+               </p>
+             </div>
+
+             <div className={styles.advantageItem}>
+               <h3 className={styles.advantageTitle}>
                  <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Practical Focus
                </h3>
                <p className={styles.text}>
-                 We develop achievable transition strategies that balance regulatory ideals with implementation realities.
+                 We focus on actionable advice. Our strategy documents are practical roadmaps, not academic exercises.
                </p>
              </div>
 
              <div className={styles.advantageItem}>
                <h3 className={styles.advantageTitle}>
-                 <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Cross-Functional Expertise
+                 <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Therapeutic Breadth
                </h3>
                <p className={styles.text}>
-                 Compliance touches quality, clinical, and operations. We understand these interdependencies.
-               </p>
-             </div>
-
-             <div className={styles.advantageItem}>
-               <h3 className={styles.advantageTitle}>
-                 <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Legacy Device Experience
-               </h3>
-               <p className={styles.text}>
-                 Expertise in transitioning legacy portfolios with long market histories but limited documentation.
+                 Our experience covers a wide range of indications, from oncology and rare diseases to cardiovascular and CNS, bringing relevant case studies to your program.
                </p>
              </div>
           </div>

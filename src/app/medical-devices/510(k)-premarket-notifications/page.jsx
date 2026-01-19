@@ -1,7 +1,7 @@
 "use client";
 
 import PageHeader from "@/components/layout/PageHeader";
-import styles from "../service-page.module.css";
+import styles from "../../service-page.module.css";
 import { CheckCircle, FileText, Activity, Layers, Shuffle, Globe, ClipboardList, Shield, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 

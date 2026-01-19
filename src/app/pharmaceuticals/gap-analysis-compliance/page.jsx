@@ -2,29 +2,29 @@
 
 import PageHeader from "@/components/layout/PageHeader";
 import styles from "../../service-page.module.css";
-import { CheckCircle, Sliders, FileText, ClipboardCheck, BarChart2, Globe, Scale, Activity, ShieldCheck } from "lucide-react";
+import { CheckCircle, Map, Search, ClipboardList, PenTool, Wrench, Activity } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function GapAnalysisPage() {
   return (
     <main className={styles.main}>
       <PageHeader 
-        title="MDR/IVDR Consulting" 
-        subtitle="Strategic guidance for EU regulatory transformation."
+        title="Gap Analysis & Compliance" 
+        subtitle="Systematic assessment and remediation to ensure regulatory standing."
       />
       
       {/* Overview Section */}
       <section className={cn(styles.section, styles.sectionWhite)}>
         <div className={styles.narrowContainer}>
           <h2 className={styles.sectionTitle}>
-            Navigating the Regulatory Shift
+            Proactive Compliance Assurance
           </h2>
           <p className={styles.textLarge}>
-            The transition from the Medical Device Directives (MDD/AIMDD/IVDD) to the Medical Device Regulation (EU 2017/745) and In Vitro Diagnostic Regulation (EU 2017/746) represents the most significant regulatory change in decades.
+            Regulatory compliance isn&apos;t static. Requirements evolve, organizational practices drift, and gaps emerge. Unidentified gaps create risk—risk of inspection findings, submission delays, or product quality issues.
           </p>
           <div style={{ height: '3px', width: '80px', background: '#0066CC', margin: '2rem 0', borderRadius: '2px' }}></div>
           <p className={styles.text}>
-            RegOps provides strategic MDR/IVDR consulting to help you navigate this complex landscape. We assess your compliance status, develop practical transition roadmaps, and support implementation. Our consultants prioritize efforts to help you allocate resources effectively and maintain market access throughout the transition.
+            RegOps conducts systematic gap analyses that compare your current state against applicable requirements, guidance expectations, and industry best practices. We document gaps clearly, assess their significance, and provide prioritized remediation recommendations. Our assessments give you a clear picture of where you stand and a practical roadmap for achieving and maintaining compliance.
           </p>
         </div>
       </section>
@@ -35,68 +35,68 @@ export default function GapAnalysisPage() {
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
              <h2 className={styles.sectionTitle}>Our Capabilities</h2>
              <p className={styles.text} style={{ maxWidth: '600px', margin: '0 auto' }}>
-               Comprehensive support across the entire regulatory lifecycle.
+               From assessment to remediation implementation.
              </p>
           </div>
           
           <div className={styles.grid}>
             <div className={styles.card}>
               <div className={styles.cardTitle}>
-                  <div className={styles.iconWrapper}><Sliders size={20} /></div>
-                  Gap Analysis
+                  <div className={styles.iconWrapper}><Map size={20} /></div>
+                  Requirements Mapping
               </div>
               <p className={styles.cardText}>
-                Comprehensive assessment of technical documentation and quality systems against MDR/IVDR. We identify gaps, quantify remediation effort, and develop prioritized transition plans.
+                Comprehensive identification of applicable regulatory requirements across your operations and markets. We map current regulations and guidance relevant to your business.
               </p>
             </div>
 
             <div className={styles.card}>
               <div className={styles.cardTitle}>
-                  <div className={styles.iconWrapper}><Scale size={20} /></div>
-                  Regulatory Pathway
+                  <div className={styles.iconWrapper}><Search size={20} /></div>
+                  Status Assessment
               </div>
               <p className={styles.cardText}>
-                Determination of device classification under MDR/IVDR key rules. We advise on conformity assessment routes, combination products, and Notified Body involvement.
+                Thorough evaluation of existing processes, documentation, and systems against mapped requirements. We gather evidence through document review and interviews.
               </p>
             </div>
 
             <div className={styles.card}>
               <div className={styles.cardTitle}>
-                  <div className={styles.iconWrapper}><Activity size={20} /></div>
-                  Clinical Strategy
+                  <div className={styles.iconWrapper}><ClipboardList size={20} /></div>
+                  Gap Identification
               </div>
               <p className={styles.cardText}>
-                Development of clinical evaluation strategies to satisfy enhanced requirements. We help establish clinical plans, equivalence justifications, and PMS/PMCF strategies.
+                Systematic comparison of current state against requirements. We analyze gap significance considering regulatory risk, operational impact, and remediation complexity.
               </p>
             </div>
 
             <div className={styles.card}>
               <div className={styles.cardTitle}>
-                  <div className={styles.iconWrapper}><BarChart2 size={20} /></div>
-                  UDI & EUDAMED
+                  <div className={styles.iconWrapper}><PenTool size={20} /></div>
+                  Remediation Planning
               </div>
               <p className={styles.cardText}>
-                Implementation support for Unique Device Identification and EUDAMED registration. We guide UDI assignment, labeling updates, and database submissions.
+                Development of prioritized remediation plans with specific actions, timelines, and resource requirements. We create practical roadmaps that account for constraints.
               </p>
             </div>
 
             <div className={styles.card}>
               <div className={styles.cardTitle}>
-                  <div className={styles.iconWrapper}><Globe size={20} /></div>
-                  Economic Operators
+                  <div className={styles.iconWrapper}><Wrench size={20} /></div>
+                  Implementation Support
               </div>
               <p className={styles.cardText}>
-                Advisory on responsibilities for manufacturers, importers, and distributors. We help establish compliant supply chain arrangements and ensure regulatory understanding.
+                Hands-on support for gap remediation including procedure development, process redesign, and training. We help you close gaps effectively, not just identify them.
               </p>
             </div>
 
              <div className={styles.card}>
               <div className={styles.cardTitle}>
-                  <div className={styles.iconWrapper}><ClipboardCheck size={20} /></div>
-                  Notified Body Liason
+                  <div className={styles.iconWrapper}><Activity size={20} /></div>
+                  Compliance Monitoring
               </div>
               <p className={styles.cardText}>
-                Support for interactions including application preparation, submission, and audit prep. We help present your regulatory case effectively for efficient certification.
+                Ongoing compliance monitoring programs that track regulatory changes and assess organizational adherence, identifying emerging gaps before they create problems.
               </p>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function GapAnalysisPage() {
             The RegOps Advantage
           </h2>
           <p className={styles.textLarge} style={{ marginBottom: '3rem' }}>
-            Our consultants have supported manufacturers across the device spectrum—from Class I accessories to Class III implantables. We understand both the requirements and the practical challenges.
+            We focus on substantive compliance gaps rather than generating lengthy findings lists of marginal significance.
           </p>
 
           <div className={styles.advantageGrid}>
@@ -119,34 +119,34 @@ export default function GapAnalysisPage() {
                  <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Regulatory Depth
                </h3>
                <p className={styles.text}>
-                 We maintain current knowledge of MDR/IVDR requirements, MDCG guidance, and Notified Body practices.
+                 We maintain current knowledge of global requirements and accurately map applicable obligations to your specific operations.
                </p>
              </div>
              
              <div className={styles.advantageItem}>
                <h3 className={styles.advantageTitle}>
-                 <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Practical Focus
+                 <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Practical Assessment
                </h3>
                <p className={styles.text}>
-                 We develop achievable transition strategies that balance regulatory ideals with implementation realities.
+                 Our gap analyses are thorough but efficient. We focus on real risks and actionable findings.
                </p>
              </div>
 
              <div className={styles.advantageItem}>
                <h3 className={styles.advantageTitle}>
-                 <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Cross-Functional Expertise
+                 <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Prioritized Plan
                </h3>
                <p className={styles.text}>
-                 Compliance touches quality, clinical, and operations. We understand these interdependencies.
+                 We risk-rank gaps and prioritize remediation recommendations, helping you allocate resources where they matter most.
                </p>
              </div>
 
              <div className={styles.advantageItem}>
                <h3 className={styles.advantageTitle}>
-                 <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Legacy Device Experience
+                 <CheckCircle size={24} color="#0066CC" fill="#EBF8FF" /> Implementation Focus
                </h3>
                <p className={styles.text}>
-                 Expertise in transitioning legacy portfolios with long market histories but limited documentation.
+                 Our goal is closed gaps, not just identified gaps. We structure our findings to facilitate effective remediation.
                </p>
              </div>
           </div>
