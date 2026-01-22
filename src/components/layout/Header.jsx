@@ -92,9 +92,11 @@ export default function Header() {
         </nav>
 
         <div className={styles.actions}>
-           <Button size="medium" className={styles.getStartedBtn}>
-               Get in Touch
-           </Button>
+           <Link href="/contact">
+             <Button size="medium" className={styles.getStartedBtn}>
+                 Get in Touch
+             </Button>
+           </Link>
            <button 
             className={styles.mobileToggle}
             onClick={() => setIsOpen(!isOpen)}
@@ -144,7 +146,9 @@ export default function Header() {
                 </div>
               ))}
               <div className={styles.mobileAction}>
-                <Button className={styles.fullWidth}>Get in Touch</Button>
+                <Link href="/contact" onClick={() => setIsOpen(false)}>
+                  <Button className={styles.fullWidth}>Get in Touch</Button>
+                </Link>
               </div>
             </div>
           </motion.div>
