@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { getPageMetadata } from "@/lib/seo";
 
 export async function generateMetadata() {
-  return await getPageMetadata("medical-devices/gap-analysis-transition-planning");
+  return await getPageMetadata("medical-devices-gap-analysis-transition-planning");
 }
 
 export default function GapAnalysisPage() {

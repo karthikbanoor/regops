@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { getPageMetadata } from "@/lib/seo";
 
 export async function generateMetadata() {
-  return await getPageMetadata("pharmaceuticals/ectd-submission-services");
+  return await getPageMetadata("pharmaceuticals-ectd-submission-services");
 }
 
 export default function ECTDPage() {

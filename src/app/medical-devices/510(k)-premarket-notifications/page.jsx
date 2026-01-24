@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { getPageMetadata } from "@/lib/seo";
 
 export async function generateMetadata() {
-  return await getPageMetadata("medical-devices/510(k)-premarket-notifications");
+  return await getPageMetadata("medical-devices-510k-premarket-notifications");
 }
 
 export default function PremarketNotificationsPage() {

@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { getPageMetadata } from "@/lib/seo";
 
 export async function generateMetadata() {
-  return await getPageMetadata("pharmaceuticals/cmc-technical-writing");
+  return await getPageMetadata("pharmaceuticals-cmc-technical-writing");
 }
 
 export default function CMCPage() {

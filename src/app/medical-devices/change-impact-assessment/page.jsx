@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { getPageMetadata } from "@/lib/seo";
 
 export async function generateMetadata() {
-  return await getPageMetadata("medical-devices/change-impact-assessment");
+  return await getPageMetadata("medical-devices-change-impact-assessment");
 }
 
 export default function ChangeAssessmentPage() {

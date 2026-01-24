@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { getPageMetadata } from "@/lib/seo";
 
 export async function generateMetadata() {
-  return await getPageMetadata("pharmaceuticals/labeling-artwork-services");
+  return await getPageMetadata("pharmaceuticals-labeling-artwork-services");
 }
 
 export default function LabelingPage() {
