@@ -4,6 +4,11 @@ import PageHeader from "@/components/layout/PageHeader";
 import styles from "../../service-page.module.css";
 import { CheckCircle, ShieldCheck, TrendingUp, AlertTriangle, FileBarChart, AlertOctagon, Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata() {
+  return await getPageMetadata("medical-devices/pms-system-design");
+}
 
 export default function PMSPage() {
   return (

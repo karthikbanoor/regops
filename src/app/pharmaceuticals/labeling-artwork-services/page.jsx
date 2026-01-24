@@ -4,6 +4,11 @@ import PageHeader from "@/components/layout/PageHeader";
 import styles from "../../service-page.module.css";
 import { CheckCircle, Tag, Globe, FileStack, Palette, FileSearch, RefreshCcw } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata() {
+  return await getPageMetadata("pharmaceuticals/labeling-artwork-services");
+}
 
 export default function LabelingPage() {
   return (

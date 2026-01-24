@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import medicalHero from "@/assets/medical-hero.png";
 import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
@@ -89,12 +90,16 @@ export default function Hero({ data }) {
             </p>
             
             <div className={styles.ctas}>
-              <Button size="large" className={styles.primaryBtn}>
-                Schedule a Consultation <ArrowRight size={18} />
-              </Button>
-              <Button size="large" variant="outline" className={styles.secondaryBtn}>
-                Explore Our Services
-              </Button>
+              <Link href="/contact">
+                <Button size="large" className={styles.primaryBtn}>
+                  Schedule a Consultation <ArrowRight size={18} />
+                </Button>
+              </Link>
+              <Link href="/medical-devices">
+                <Button size="large" variant="outline" className={styles.secondaryBtn}>
+                  Explore Our Services
+                </Button>
+              </Link>
             </div>
 
             <div className={styles.trustItems}>

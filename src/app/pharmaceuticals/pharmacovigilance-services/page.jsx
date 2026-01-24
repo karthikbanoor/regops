@@ -4,6 +4,11 @@ import PageHeader from "@/components/layout/PageHeader";
 import styles from "../../service-page.module.css";
 import { CheckCircle, Activity, FileSpreadsheet, Radio, Database, Archive, ShieldCheck, HeartPulse } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata() {
+  return await getPageMetadata("pharmaceuticals/pharmacovigilance-services");
+}
 
 export default function PVPage() {
   return (

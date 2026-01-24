@@ -4,6 +4,11 @@ import PageHeader from "@/components/layout/PageHeader";
 import styles from "../../service-page.module.css";
 import { CheckCircle, MapPin, Flag, FileInput, Handshake, Globe2, AlertOctagon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata() {
+  return await getPageMetadata("pharmaceuticals/market-access-expansion");
+}
 
 export default function MarketAccessPage() {
   return (

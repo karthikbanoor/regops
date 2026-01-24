@@ -4,6 +4,11 @@ import PageHeader from "@/components/layout/PageHeader";
 import styles from "../../service-page.module.css";
 import { CheckCircle, FileText, Search, BookOpen, Database, BarChart, GitMerge } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata() {
+  return await getPageMetadata("medical-devices/pmcf-plan-development");
+}
 
 export default function PMCFPage() {
   return (

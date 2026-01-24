@@ -4,6 +4,11 @@ import PageHeader from "@/components/layout/PageHeader";
 import styles from "../../service-page.module.css";
 import { CheckCircle, Radar, TrendingUp, BarChart3, FileText, Lightbulb, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata() {
+  return await getPageMetadata("pharmaceuticals/regulatory-intelligence-services");
+}
 
 export default function RegIntelPage() {
   return (

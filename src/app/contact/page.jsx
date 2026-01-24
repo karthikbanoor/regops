@@ -2,6 +2,11 @@
 
 import styles from "./contact.module.css";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { getPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata() {
+  return await getPageMetadata("contact");
+}
 
 export default function ContactPage() {
   return (

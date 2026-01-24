@@ -4,6 +4,11 @@ import PageHeader from "@/components/layout/PageHeader";
 import styles from "../../service-page.module.css";
 import { CheckCircle, BookOpen, FileCheck, FileSignature, Globe, AlertCircle, MessageSquare } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata() {
+  return await getPageMetadata("pharmaceuticals/dossier-authoring-services");
+}
 
 export default function DossierPage() {
   return (
