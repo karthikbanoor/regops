@@ -26,8 +26,7 @@ export default function ContactPage() {
               </div>
               <div className={styles.detailContent}>
                 <h3>Email Us</h3>
-                <p>info@regops.global</p>
-                <p>support@regops.global</p>
+                <p>contact@regops.global</p>
               </div>
             </div>
 
