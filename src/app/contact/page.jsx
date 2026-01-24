@@ -1,4 +1,4 @@
-"use client";
+
 
 import styles from "./contact.module.css";
 import { Mail, MapPin, Phone } from "lucide-react";

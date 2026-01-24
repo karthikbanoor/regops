@@ -37,7 +37,11 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
             const response = await fetch(requestUrl, mergedOptions);
 
             if (!response.ok) {
-                console.error(`Error fetching from Strapi: ${response.statusText}`);
+                if (response.status === 404) {
+                    console.warn(`Strapi content not found at ${requestUrl} (404). Using fallback.`);
+                    return null;
+                }
+                console.error(`Error fetching from Strapi at ${requestUrl}: ${response.status} ${response.statusText}`);
                 return null;
             }
 

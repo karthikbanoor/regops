@@ -1,4 +1,4 @@
-"use client";
+
 
 import PageHeader from "@/components/layout/PageHeader";
 import Services from "@/components/sections/Services"; // Reuse services component for now, or build specific

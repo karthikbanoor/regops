@@ -1,4 +1,4 @@
-"use client";
+
 
 import PageHeader from "@/components/layout/PageHeader";
 import styles from "../../service-page.module.css";
