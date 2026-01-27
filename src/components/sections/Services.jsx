@@ -57,9 +57,9 @@ export default function Services() {
               </div>
               <h3 className={styles.cardTitle}>{item.title}</h3>
               <p className={styles.cardDesc}>{item.description}</p>
-              <a href="#" className={styles.cardLink}>
+              {/* <a href="#" className={styles.cardLink}>
                 Learn more <ArrowRight size={16} />
-              </a>
+              </a> */}
             </div>
           ))}
         </div>

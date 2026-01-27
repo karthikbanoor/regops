@@ -1,6 +1,13 @@
 .section {
-    padding: 8rem 0;
+    padding: 4rem 0;
+    /* Mobile padding */
     background: #ffffff;
+}
+
+@media (min-width: 768px) {
+    .section {
+        padding: 8rem 0;
+    }
 }
 
 .container {
@@ -33,11 +40,19 @@
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 2.25rem;
+    /* Mobile first */
     color: #1A202C;
-    line-height: 1.15;
+    line-height: 1.2;
     font-weight: 700;
     margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 3rem;
+        line-height: 1.15;
+    }
 }
 
 .highlight {
@@ -53,10 +68,19 @@
 
 .statsRow {
     display: flex;
-    gap: 3rem;
+    flex-direction: column;
+    /* Mobile first stack */
+    gap: 2rem;
     margin-bottom: 3rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid #E2E8F0;
+}
+
+@media (min-width: 640px) {
+    .statsRow {
+        flex-direction: row;
+        gap: 3rem;
+    }
 }
 
 .statItem {

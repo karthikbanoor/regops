@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import teamImage from "@/assets/team-working.png";
 import Button from "@/components/ui/Button";
 import styles from "./WhyUs.module.css";
@@ -33,7 +34,9 @@ export default function WhyUs() {
                 </div>
             </div>
 
-            <Button size="large" className={styles.cta}>Partner With Us</Button>
+            <Link href="/contact">
+              <Button size="large" className={styles.cta}>Partner With Us</Button>
+            </Link>
           </div>
 
           {/* Right Content - Clean Medical Look */}

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "@/components/ui/Button";
@@ -11,6 +12,8 @@ import { cn } from "@/lib/utils";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [expandedMobile, setExpandedMobile] = useState({});
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +28,7 @@ export default function Header() {
     { name: "About", href: "/about" },
     {
       name: "Medical Devices",
-      href: "#",
+      href: "/medical-devices",
       dropdown: [
         { name: "Gap Analysis & Transition Planning", href: "/medical-devices/gap-analysis-transition-planning" },
         { name: "510(k) Premarket Notifications", href: "/medical-devices/510(k)-premarket-notifications" },
@@ -39,7 +42,7 @@ export default function Header() {
     },
     {
       name: "Pharmaceuticals",
-      href: "/pharma",
+      href: "/pharmaceuticals",
       dropdown: [
         { name: "CMC Technical Writing", href: "/pharmaceuticals/cmc-technical-writing" },
         { name: "Dossier Authoring Services", href: "/pharmaceuticals/dossier-authoring-services" },
@@ -117,32 +120,67 @@ export default function Header() {
           >
             <div className={styles.mobileMenuInner}>
               {navItems.map((item) => (
-                <div key={item.name}>
-                  <Link 
-                    href={item.href} 
-                    className={styles.mobileLink}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.dropdown && (
-                    <div className={styles.mobileDropdown}>
-                      {item.dropdown.map((subItem) => {
-                        const label = typeof subItem === 'string' ? subItem : subItem.name;
-                         const href = typeof subItem === 'string' ? '#' : subItem.href;
-                         return (
-                          <Link 
-                              key={label} 
-                              href={href} 
-                              className={styles.mobileDropdownItem}
-                              onClick={() => setIsOpen(false)}
-                          >
-                            {label}
-                          </Link>
-                        );
-                      })}
-                    </div>
+                <div key={item.name} className={styles.mobileItemContainer}>
+                  {/* If item has dropdown, clicking header toggles it. If not, it's a link */}
+                  {item.dropdown ? (
+                      <div 
+                        className={styles.mobileItemHeader}
+                        onClick={() => setExpandedMobile(prev => ({...prev, [item.name]: !prev[item.name]}))}
+                      >
+                        <span className={styles.mobileLink}>{item.name}</span>
+                        <ChevronDown 
+                            size={20} 
+                            className={cn(styles.chevron, expandedMobile[item.name] && styles.rotate180)}
+                        />
+                      </div>
+                  ) : (
+                      <Link 
+                        href={item.href} 
+                        className={styles.mobileLink} // Apply same class for padding
+                        onClick={() => setIsOpen(false)}
+                        style={{ display: 'block' }} // Ensure it behaves like the header
+                      >
+                        {item.name}
+                      </Link>
                   )}
+                  
+                  <AnimatePresence>
+                    {item.dropdown && expandedMobile[item.name] && (
+                        <motion.div 
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className={styles.mobileDropdown}
+                        >
+                            {/* Add "All [Category]" Link */}
+                            {item.href && item.href !== '#' && (
+                                <Link 
+                                    href={item.href} 
+                                    className={cn(styles.mobileDropdownItem, pathname === item.href && styles.activeMobileItem)}
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    All {item.name}
+                                </Link>
+                            )}
+
+                            {item.dropdown.map((subItem) => {
+                                const label = typeof subItem === 'string' ? subItem : subItem.name;
+                                const href = typeof subItem === 'string' ? '#' : subItem.href;
+                                const isActive = pathname === href;
+                                return (
+                                <Link 
+                                    key={label} 
+                                    href={href} 
+                                    className={cn(styles.mobileDropdownItem, isActive && styles.activeMobileItem)}
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {label}
+                                </Link>
+                                );
+                            })}
+                        </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               ))}
               <div className={styles.mobileAction}>

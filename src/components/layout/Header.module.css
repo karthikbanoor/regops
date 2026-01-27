@@ -181,9 +181,12 @@
 
 /* Mobile Menu */
 .mobileMenu {
-    overflow: hidden;
+    overflow-y: auto;
+    max-height: calc(100vh - 80px);
     background: #ffffff;
     border-bottom: 1px solid #E2E8F0;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
 }
 
 .mobileMenuInner {
@@ -193,6 +196,13 @@
     gap: 1rem;
 }
 
+/* NEW: Mobile Item Header for Accordion */
+.mobileItemHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .mobileLink {
     font-size: 1.1rem;
     font-weight: 600;
@@ -200,6 +210,22 @@
     text-decoration: none;
     display: block;
     padding: 0.5rem 0;
+    flex-grow: 1;
+}
+
+.mobileDropdownToggle {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: #718096;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotate180 {
+    transform: rotate(180deg);
 }
 
 .mobileDropdown {
@@ -209,6 +235,8 @@
     gap: 0.5rem;
     border-left: 2px solid #E2E8F0;
     margin-top: 0.25rem;
+    overflow: hidden;
+    /* For animation */
 }
 
 .mobileDropdownItem {
@@ -216,6 +244,14 @@
     color: #718096;
     text-decoration: none;
     padding: 0.35rem 0;
+}
+
+.activeMobileItem {
+    color: #0066CC;
+    font-weight: 600;
+    background-color: #F0F9FF;
+    border-radius: 8px;
+    padding-left: 0.5rem;
 }
 
 .mobileAction {

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
 import styles from "./CTA.module.css";
@@ -18,9 +19,11 @@ export default function CTA() {
           </p>
           
           <div className={styles.ctas}>
-            <Button size="large" className={styles.primaryBtn}>
-              Contact Us <ArrowRight size={18} />
-            </Button>
+            <Link href="/contact">
+              <Button size="large" className={styles.primaryBtn}>
+                Contact Us <ArrowRight size={18} />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
