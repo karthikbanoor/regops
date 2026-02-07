@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import Button from "@/components/ui/Button";
 import styles from "./about.module.css";
 
 const fadeInUp = {
@@ -49,6 +52,14 @@ export default function AboutClient() {
               regulatory frameworks, enabling clients to move confidently
               through the approval process in the USA, EMEA, APAC, and India.
             </p>
+
+            <div className={styles.ctaWrapper}>
+              <Link href="/contact">
+                <Button size="large" className={styles.ctaButton}>
+                  Connect for a free regulatory consultation <ArrowRight size={18} />
+                </Button>
+              </Link>
+            </div>
           </motion.div>
         </motion.section>
 

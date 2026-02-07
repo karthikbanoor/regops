@@ -164,3 +164,53 @@
     color: #475569;
     margin-bottom: 1.5rem;
 }
+
+.ctaWrapper {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.ctaButton {
+    background: #0066CC;
+    font-weight: 600;
+    box-shadow: 0 10px 15px -3px rgba(0, 102, 204, 0.2), 0 4px 6px -2px rgba(0, 102, 204, 0.1);
+}
+
+.ctaButton:hover {
+    background: #0052A3;
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(0, 102, 204, 0.3), 0 10px 10px -5px rgba(0, 102, 204, 0.1);
+}
+
+@media (max-width: 768px) {
+    .ctaWrapper {
+        width: 100%;
+        display: block;
+        padding: 0 1rem;
+    }
+
+    .ctaWrapper a {
+        display: block;
+        width: 100%;
+    }
+
+    .ctaButton {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .page {
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+    }
+
+    .hero {
+        margin-bottom: 4rem;
+    }
+
+    .title {
+        font-size: 2.25rem;
+    }
+}
