@@ -1,10 +1,10 @@
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { fetchAPI, getStrapiMedia } from "@/lib/strapi";
 
-const inter = Inter({ subsets: ["latin"] });
+const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export async function generateMetadata() {
   const global = await fetchAPI("/global", {
@@ -40,7 +40,7 @@ export async function generateMetadata() {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className} suppressHydrationWarning={true}>
+      <body className={plusJakartaSans.className} suppressHydrationWarning={true}>
         <Header />
         {children}
         <Footer />
